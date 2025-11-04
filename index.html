@@ -1,160 +1,135 @@
----
-layout: default
----
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Yixin Yang's Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/abstract_button.css" />
+</head>
 
-<div class="page clearfix" index>
-    <div class="left">
-        <h1>Welcome to HyG's Blog!</h1>
-        <small>这里记录着我的前端学习之路</small>
-        <hr>
-        <ul>
-            {% for post in paginator.posts %}
-              <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
-                    </div>
-                    <div class="label-card">
-                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
-                        {% endif %}
-                    </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
+<body>
+    <div class="wrapper">
+        <div class="container">
 
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include tag.html %}
-                    </div>
+            <div class="module info">
+                <div class="fl col-7">
+                    <p id='Personal-Name'>Yixin (艺新) Yang</p>
+                    <p id='Personal-introduction'>Ph.D. Candidate, Nanjing University of Science and Technology</p>
+                    <p>Email: yangyixin[at]njust[dot]edu[dot]cn</p>
+                    <p>Address: Nanjing, Jiangsu, China</p>
                 </div>
-                <div class="excerpt">
-                    {{post.excerpt}}
+                <div class="fr col-3">
+                    <img class="personal-photo" src="img/yixin_photo.jpg">
                 </div>
-                <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            {% endfor %}
-        </ul>
+            </div>
 
+            <hr style="float:left; width:100%" />
 
+            <div class="module research-interest">
+                <p class="p-head">Research Interest</p>
+                <p>My research focuses on video colorization, video super-resolution, with emphasis on diffusion models, temporal coherence, and memory-based spatial-temporal feature propagation. I am also interested in image/video enhancement, deblurring, and related low-level vision problems.</p>
+            </div>
 
-        <!-- Pagination links -->
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
-          {% else %}
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
-          {% endif %}
-          <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
-          {% else %}
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
-          {% endif %}
-        </div>
-    </div>
-    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
-    <div class="right">
-        <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
+            <hr style="float:left; width:100%" />
+
+            <div class="module latest-news">
+                <p class="p-head">Latest News</p>
+                <ul>
+                    <li>Oct. 2024: Led the restoration for CCTV-7 National Day special program <i>“为了新中国”</i>; restored historic materials including the Three Major Campaigns and the Japanese surrender ceremony (aired on Oct. 3, 2024).</li>
+                    <li>Jun. 2024: Classic media restoration showcased at <i>2024 中国·AI 盛典</i> hosted by CMG; covered by multiple media (Yangshipin, Nanjing Daily, The Paper, NJUST official WeChat).</li>
+                    <li>Mar.–Sep. 2024: Restoration/enhancement of classic footage such as the 1986 TV series <i>Journey to the West</i> and the short film on the PRC’s first Olympic delegation (1952) with a reference-guided video diffusion model.</li>
+                    <li>Sep. 2023–Mar. 2024: Participated in 4K color restoration of the classic film <i>Lei Feng</i> with several institutes; screenings and media coverage released.</li>
+                    <li>2024–2025: Received NJUST Doctoral National Scholarship; awarded NJUST Youth May Fourth Medal; named Excellent Graduate Student (2024).</li>
+                    <li>2023: 1st Place, CVPR 2023 @ NTIRE Video Colorization Track 1: FID Optimization.</li>
+                    <li>2025: 1st Place, ICCV 2025 @ AIM Robust Offline Video Super-Resolution Challenge.</li>
+                    <li>2024: National Gold Award, China International College Students’ Innovation Competition; First Prize, Jiangsu Student Innovation Competition.</li>
                 </ul>
             </div>
 
-            <!-- Content -->
-            <div class="side ">
-                <div>
-                    <i class="fa fa-th-list"></i>
-                    Categories
+            <hr style="float:left; width:100%" />
+
+            <div class="module selected-publications">
+                <p class="p-head">Selected Publications</p>
+
+                <div class="publication">
+                    <div class="pub-img-bar"><img class="pub-img" src="img/tpami24_bistnet.png"></div>
+                    <div class="pub-title">
+                        <p>
+                            <b>Yixin Yang</b>, Jinshan Pan (Advisor), Zhongzheng Peng, Xiaoyu Du, Zhulin Tao, Jinhui Tang, "BiSTNet: Semantic Image Prior Guided Bidirectional Temporal Feature Fusion for Deep Exemplar-Based Video Colorization", IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2024.
+                            <br>
+                            [<a target="_blank" href="">Project</a>]
+                            [<a target="_blank" href="">Paper</a>]
+                        </p>
+                    </div>
                 </div>
-                <ul class="content-ul" cate>
-                    {% for category in site.categories %}
-                    <li>
-                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
+
+                <div class="publication">
+                    <div class="pub-img-bar"><img class="pub-img" src="img/eccv24_colormnet.png"></div>
+                    <div class="pub-title">
+                        <p>
+                            <b>Yixin Yang</b>, Jiangxin Dong, Jinhui Tang, Jinshan Pan (Advisor), "ColorMNet: A Memory-based Deep Spatial-Temporal Feature Propagation Network for Video Colorization", European Conference on Computer Vision (<b>ECCV</b>), 2024.
+                            <br>
+                            [<a target="_blank" href="">Project</a>]
+                            [<a target="_blank" href="">Paper</a>]
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr style="float:left; width:100%" />
+
+            <div class="module latest-news">
+                <p class="p-head">Projects</p>
+                <ul>
+                    <li><b>CCTV-7 National Day Special: “为了新中国” (Historical Classics Restoration)</b> — Jul. 2024 – Oct. 2024
+                        <br>Proposed a memory-driven spatio-temporal propagation framework for video colorization; restored materials such as the Three Major Campaigns and the Japanese Instrument of Surrender. Aired on Oct. 3, 2024. 
+                        [<a target="_blank" href="https://tv.cctv.com/2024/10/03/VIDEmgDbTZuUH4J2eASteD0U241003.shtml">Program</a>]
                     </li>
-                    {% endfor %}
+                    <li><b>CMG Archive (四大名著 & 1952 Olympics) — Classic Restoration & Enhancement</b> — Mar. 2024 – Sep. 2024
+                        <br>Developed a reference-guided video diffusion model with text/optical-flow guidance to enhance semantic alignment and temporal coherence; restored the 1986 TV series <i>Journey to the West</i> and the 1952 PRC Olympic Delegation short film.
+                        [<a target="_blank" href="https://tv.cctv.com/2024/06/28/VIDEEt71O3OL0oJAVwvElpXV240628.shtml?spm=C55953877151.PXXwefeHcOAR.0.0">Showcase</a>]
+                    </li>
+                    <li><b>“Lei Feng” 4K Color Version Restoration</b> — Sep. 2023 – Mar. 2024
+                        <br>Built a bidirectional temporal fusion colorization pipeline; screenings presented by partner institutes.
+                        [<a target="_blank" href="https://cs.njust.edu.cn/ba/42/c1817a309826/page.htm">News</a>]
+                    </li>
                 </ul>
-            </div>
-            <!-- 其他div框放到这里 -->
-            <div class="side">
-                <div>
-                    <i class="fa fa-tags"></i>
-                    Tags
-                </div>
-                <div class="tags-cloud">
-                    {% assign first = site.tags.first %}
-                    {% assign max = first[1].size %}
-                    {% assign min = max %}
-                    {% for tag in site.tags offset:1 %}
-                      {% if tag[1].size > max %}
-                        {% assign max = tag[1].size %}
-                      {% elsif tag[1].size < min %}
-                        {% assign min = tag[1].size %}
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if max == min %}
-                        {% assign diff = 1 %}
-                    {% else %}
-                        {% assign diff = max | minus: min %}
-                    {% endif %}
-
-                    {% for tag in site.tags %}
-                      {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
-                      {% assign base = temp | divided_by: 4 %}
-                      {% assign remain = temp | modulo: 4 %}
-                      {% if remain == 0 %}
-                        {% assign size = base | plus: 9 %}
-                      {% elsif remain == 1 or remain == 2 %}
-                        {% assign size = base | plus: 9 | append: '.5' %}
-                      {% else %}
-                        {% assign size = base | plus: 10 %}
-                      {% endif %}
-                      {% if remain == 0 or remain == 1 %}
-                        {% assign color = 9 | minus: base %}
-                      {% else %}
-                        {% assign color = 8 | minus: base %}
-                      {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
-                    {% endfor %}
-                </div>
+                <p><b>Honors & Awards (Team/Lead)</b></p>
+                <ul>
+                    <li>1st Place — ICCV 2025 @ AIM Robust Offline Video Super-Resolution Challenge</li>
+                    <li>1st Place — CVPR 2023 @ NTIRE Video Colorization (Track 1: FID Optimization)</li>
+                    <li>National Gold Award — China International College Students’ Innovation Competition (2024)</li>
+                    <li>First Prize — Jiangsu Student Innovation Competition (2024)</li>
+                    <li>NJUST Doctoral National Scholarship (2024–2025)</li>
+                    <li>NJUST Youth May Fourth Medal; NJUST Excellent Graduate Student (2024)</li>
+                </ul>
+                <p><i>Note: The above awards/projects were led as team or student-team first responsible person.</i></p>
             </div>
 
-            <!-- <div class="side">
-                <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
-                </div>
-                <ul  class="content-ul">
+            <hr style="float:left; width:100%" />
 
+            <div class="module latest-news">
+                <p class="p-head">Education</p>
+                <ul>
+                    <li><b>Ph.D. in Computer Science</b>, Nanjing University of Science and Technology (211), School of Computer Science & Engineering, Sep. 2023 – Present. <i>U.S. News Global Best Universities for CS: #56 (2025–2026).</i></li>
+                    <li><b>M.S. in Pattern Recognition & AI</b>, University of California, Riverside (QS Top 500), Bourns College of Engineering, Sep. 2017 – Jul. 2021. <i>CS Ranking #28 nationally (2015–2025).</i></li>
+                    <li><b>B.Eng. in Electronic Information Engineering</b>, University of Electronic Science and Technology of China (985), School of Electronic Engineering, Sep. 2013 – Jul. 2017. <i>Discipline Evaluation: A+.</i></li>
                 </ul>
-            </div> -->
+            </div>
+
+            <hr style="float:left; width:100%" />
+
+            <div class="module latest-news">
+                <p class="p-head">Experience</p>
+                <ul>
+                    <li><b>Computer Vision Researcher</b>, SenseTime (Shenzhen) — Mobile Intelligence BU, Sep. 2021 – Jul. 2023. <i>Selected for "AI Navigator" program; Top compensation in campus recruitment.</i></li>
+                </ul>
+            </div>
+
         </div>
     </div>
-</div>
-<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
-<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+
+</body>
+</html>
