@@ -1,135 +1,128 @@
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Yixin Yang's Homepage</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/abstract_button.css" />
-</head>
 
-<body>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./favicon.png">
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="container">
 
-            <div class="module info">
-                <div class="fl col-7">
-                    <p id='Personal-Name'>Yixin (艺新) Yang</p>
-                    <p id='Personal-introduction'>Ph.D. Candidate, Nanjing University of Science and Technology</p>
-                    <p>Email: yangyixin[at]njust[dot]edu[dot]cn</p>
-                    <p>Address: Nanjing, Jiangsu, China</p>
-                </div>
-                <div class="fr col-3">
-                    <img class="personal-photo" src="img/yixin_photo.jpg">
-                </div>
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module research-interest">
-                <p class="p-head">Research Interest</p>
-                <p>My research focuses on video colorization, video super-resolution, with emphasis on diffusion models, temporal coherence, and memory-based spatial-temporal feature propagation. I am also interested in image/video enhancement, deblurring, and related low-level vision problems.</p>
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module latest-news">
-                <p class="p-head">Latest News</p>
-                <ul>
-                    <li>Oct. 2024: Led the restoration for CCTV-7 National Day special program <i>“为了新中国”</i>; restored historic materials including the Three Major Campaigns and the Japanese surrender ceremony (aired on Oct. 3, 2024).</li>
-                    <li>Jun. 2024: Classic media restoration showcased at <i>2024 中国·AI 盛典</i> hosted by CMG; covered by multiple media (Yangshipin, Nanjing Daily, The Paper, NJUST official WeChat).</li>
-                    <li>Mar.–Sep. 2024: Restoration/enhancement of classic footage such as the 1986 TV series <i>Journey to the West</i> and the short film on the PRC’s first Olympic delegation (1952) with a reference-guided video diffusion model.</li>
-                    <li>Sep. 2023–Mar. 2024: Participated in 4K color restoration of the classic film <i>Lei Feng</i> with several institutes; screenings and media coverage released.</li>
-                    <li>2024–2025: Received NJUST Doctoral National Scholarship; awarded NJUST Youth May Fourth Medal; named Excellent Graduate Student (2024).</li>
-                    <li>2023: 1st Place, CVPR 2023 @ NTIRE Video Colorization Track 1: FID Optimization.</li>
-                    <li>2025: 1st Place, ICCV 2025 @ AIM Robust Offline Video Super-Resolution Challenge.</li>
-                    <li>2024: National Gold Award, China International College Students’ Innovation Competition; First Prize, Jiangsu Student Innovation Competition.</li>
-                </ul>
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module selected-publications">
-                <p class="p-head">Selected Publications</p>
-
-                <div class="publication">
-                    <div class="pub-img-bar"><img class="pub-img" src="img/tpami24_bistnet.png"></div>
-                    <div class="pub-title">
-                        <p>
-                            <b>Yixin Yang</b>, Jinshan Pan (Advisor), Zhongzheng Peng, Xiaoyu Du, Zhulin Tao, Jinhui Tang, "BiSTNet: Semantic Image Prior Guided Bidirectional Temporal Feature Fusion for Deep Exemplar-Based Video Colorization", IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2024.
-                            <br>
-                            [<a target="_blank" href="">Project</a>]
-                            [<a target="_blank" href="">Paper</a>]
-                        </p>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="pub-img-bar"><img class="pub-img" src="img/eccv24_colormnet.png"></div>
-                    <div class="pub-title">
-                        <p>
-                            <b>Yixin Yang</b>, Jiangxin Dong, Jinhui Tang, Jinshan Pan (Advisor), "ColorMNet: A Memory-based Deep Spatial-Temporal Feature Propagation Network for Video Colorization", European Conference on Computer Vision (<b>ECCV</b>), 2024.
-                            <br>
-                            [<a target="_blank" href="">Project</a>]
-                            [<a target="_blank" href="">Paper</a>]
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module latest-news">
-                <p class="p-head">Projects</p>
-                <ul>
-                    <li><b>CCTV-7 National Day Special: “为了新中国” (Historical Classics Restoration)</b> — Jul. 2024 – Oct. 2024
-                        <br>Proposed a memory-driven spatio-temporal propagation framework for video colorization; restored materials such as the Three Major Campaigns and the Japanese Instrument of Surrender. Aired on Oct. 3, 2024. 
-                        [<a target="_blank" href="https://tv.cctv.com/2024/10/03/VIDEmgDbTZuUH4J2eASteD0U241003.shtml">Program</a>]
-                    </li>
-                    <li><b>CMG Archive (四大名著 & 1952 Olympics) — Classic Restoration & Enhancement</b> — Mar. 2024 – Sep. 2024
-                        <br>Developed a reference-guided video diffusion model with text/optical-flow guidance to enhance semantic alignment and temporal coherence; restored the 1986 TV series <i>Journey to the West</i> and the 1952 PRC Olympic Delegation short film.
-                        [<a target="_blank" href="https://tv.cctv.com/2024/06/28/VIDEEt71O3OL0oJAVwvElpXV240628.shtml?spm=C55953877151.PXXwefeHcOAR.0.0">Showcase</a>]
-                    </li>
-                    <li><b>“Lei Feng” 4K Color Version Restoration</b> — Sep. 2023 – Mar. 2024
-                        <br>Built a bidirectional temporal fusion colorization pipeline; screenings presented by partner institutes.
-                        [<a target="_blank" href="https://cs.njust.edu.cn/ba/42/c1817a309826/page.htm">News</a>]
-                    </li>
-                </ul>
-                <p><b>Honors & Awards (Team/Lead)</b></p>
-                <ul>
-                    <li>1st Place — ICCV 2025 @ AIM Robust Offline Video Super-Resolution Challenge</li>
-                    <li>1st Place — CVPR 2023 @ NTIRE Video Colorization (Track 1: FID Optimization)</li>
-                    <li>National Gold Award — China International College Students’ Innovation Competition (2024)</li>
-                    <li>First Prize — Jiangsu Student Innovation Competition (2024)</li>
-                    <li>NJUST Doctoral National Scholarship (2024–2025)</li>
-                    <li>NJUST Youth May Fourth Medal; NJUST Excellent Graduate Student (2024)</li>
-                </ul>
-                <p><i>Note: The above awards/projects were led as team or student-team first responsible person.</i></p>
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module latest-news">
-                <p class="p-head">Education</p>
-                <ul>
-                    <li><b>Ph.D. in Computer Science</b>, Nanjing University of Science and Technology (211), School of Computer Science & Engineering, Sep. 2023 – Present. <i>U.S. News Global Best Universities for CS: #56 (2025–2026).</i></li>
-                    <li><b>M.S. in Pattern Recognition & AI</b>, University of California, Riverside (QS Top 500), Bourns College of Engineering, Sep. 2017 – Jul. 2021. <i>CS Ranking #28 nationally (2015–2025).</i></li>
-                    <li><b>B.Eng. in Electronic Information Engineering</b>, University of Electronic Science and Technology of China (985), School of Electronic Engineering, Sep. 2013 – Jul. 2017. <i>Discipline Evaluation: A+.</i></li>
-                </ul>
-            </div>
-
-            <hr style="float:left; width:100%" />
-
-            <div class="module latest-news">
-                <p class="p-head">Experience</p>
-                <ul>
-                    <li><b>Computer Vision Researcher</b>, SenseTime (Shenzhen) — Mobile Intelligence BU, Sep. 2021 – Jul. 2023. <i>Selected for "AI Navigator" program; Top compensation in campus recruitment.</i></li>
-                </ul>
-            </div>
-
+      <!-- Header & brief intro (no photo) -->
+      <div class="module">
+        <div class="fl m10">
+          <h1><p class="top-name">Yixin Yang</p></h1>
+          <p>
+            I am a Ph.D. candidate in Computer Science at 
+            <a href="https://www.njust.edu.cn" target="_blank">Nanjing University of Science and Technology</a>,
+            advised by <a href="https://jspan.github.io/" target="_blank">Prof. Jinshan Pan</a>.
+            Previously, I received my M.S. from the University of California, Riverside (Bourns College of Engineering),
+            and my B.Eng. from the University of Electronic Science and Technology of China (School of Electronic Engineering).
+            I also worked at SenseTime (Shenzhen) as a Computer Vision Researcher (Mobile Intelligence BU).
+          </p>
         </div>
-    </div>
+      </div>
 
-</body>
+      <!-- About / interests / contacts / links -->
+      <div class="module">
+        <hr>
+        <p>
+          My research interests include <b>video colorization</b> and <b>video super-resolution</b>,
+          with a focus on diffusion models, temporal coherence, and memory-based spatial–temporal feature propagation.
+          I’m also interested in low-level vision tasks such as image/video enhancement and deblurring.
+        </p>
+        <p>
+          You can contact me by E-mail: 
+          <i>yangyixin[at]njust[dot]edu[dot]cn</i>, yixin[dot]yang[at]email[dot]ucr[dot]edu.
+        </p>
+        <p>
+          You can find my publications and projects from my [<a href="https://scholar.google.com/citations?user=CdEzWKQAAAAJ&hl=en" target="_blank">Google Scholar</a>] and [<a href="https://github.com/yyang181" target="_blank">Github</a>].
+          <!-- Find more from 
+          [<a href="https://github.com/yyang181" target="_blank">Github</a>]. -->
+          <!-- 如需加 Google Scholar，请把你的 Scholar 链接发我，我再补上：
+          [<a href="YOUR_SCHOLAR_LINK" target="_blank">Google Scholar</a>] -->
+        </p>
+      </div>
+
+      <!-- Latest News -->
+      <div class="module">
+        <h2>Latest News:</h2>
+        <hr>
+        <ul>
+          <li>Oct. 2025: NJUST Doctoral National Scholarship.</li>
+          <li>Oct. 2025: <b>National Gold Award</b>, China International College Students' Innovation Competition (2025).</li>
+          <li>Aug. 2025: <b>1st Place</b>, ICCV 2025 @ AIM Robust Offline Video Super-Resolution Challenge [<a href="https://www.codabench.org/competitions/8031/#/results-tab" target="_blank">Leaderboard</a>].</li>
+          <li>Nov. 2024: NJUST Youth May Fourth Medal.</li>
+          <li>Nov. 2024: NJUST Excellent Graduate Student.</li>
+          <li>Oct. 2024: <b>National Gold Award</b>, China International College Students' Innovation Competition (2024).</li>
+          <li>Sep. 2024: One paper is accepted by <b>ECCV 2024</b> [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00578.pdf" target="_blank">Paper</a>].</li>
+          <li>Jul. 2024: <b>First Prize</b>, Jiangsu Student Innovation Competition.</li>
+          <li>Feb. 2024: One paper is accepted by <b>JCST</b> [<a href="https://link.springer.com/article/10.1007/s11390-024-4143-z" target="_blank">Paper</a>].</li>
+          <li>Feb. 2024: One paper is accepted by <b>IEEE TPAMI</b> [<a href="https://ieeexplore.ieee.org/document/10453471" target="_blank">Paper</a>].</li>
+          <li>Mar. 2023: <b>1st Place</b>, CVPR 2023 @ NTIRE Video Colorization Challenge (Track 1: FID Optimization) [<a href="https://tianchi.aliyun.com/competition/entrance/532054/rankingList" target="_blank">Leaderboard</a>].</li>
+        </ul>
+      </div>
+
+      <!-- Publications -->
+      <div class="module">
+        <h2>Publications:</h2>
+        <hr>
+
+        <div class="publication">
+          <p>
+            <b>BiSTNet: Semantic Image Prior Guided Bidirectional Temporal Feature Fusion for Deep Exemplar-Based Video Colorization</b><br>
+            <b>Yixin Yang</b>, Jinshan Pan, Zhongzheng Peng, Xiaoyu Du, Zhulin Tao, Jinhui Tang<br>
+            <i>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</i><br>
+            <!-- 可补链接： -->
+            [<a href="https://yyang181.github.io/BiSTNet/" target="_blank">Project</a>]
+            [<a href="https://ieeexplore.ieee.org/document/10453471" target="_blank">Paper</a>]
+          </p>
+        </div>
+
+        <div class="publication">
+          <p>
+            <b>ColorMNet: A Memory-based Deep Spatial-Temporal Feature Propagation Network for Video Colorization</b><br>
+            <b>Yixin Yang</b>, Jiangxin Dong, Jinhui Tang, Jinshan Pan<br>
+            <i>European Conference on Computer Vision (ECCV), 2024</i><br>
+            [<a href="https://yyang181.github.io/colormnet/" target="_blank">Project</a>]
+            [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00578.pdf" target="_blank">Paper</a>]
+          </p>
+        </div>
+
+        <div class="publication">
+          <p>
+            <b>Video Colorization: A Survey</b><br>
+            Zhongzheng Peng, <b>Yixin Yang</b>, Jinhui Tang, Jinshan Pan<br>
+            <i>Journal of Computer Science and Technology (JCST), 2024</i><br>
+            [<a href="https://link.springer.com/article/10.1007/s11390-024-4143-z" target="_blank">Paper</a>]
+          </p>
+        </div>
+      </div>
+
+      <!-- Projects (from your resume) -->
+      <div class="module">
+        <h2>Projects:</h2>
+        <hr>
+        <ul>
+          <li>
+            <b>CCTV-7 National Day Special: “为了新中国” (Historical Classics Restoration)</b> — Jul. 2024 – Oct. 2024<br>
+            Proposed a memory-driven spatio-temporal propagation framework for video colorization; restored materials such as the Three Major Campaigns and the Japanese Instrument of Surrender. Aired on Oct. 3, 2024 [<a href="https://tv.cctv.com/2024/10/03/VIDEmgDbTZuUH4J2eASteD0U241003.shtml" target="_blank">Official Broadcast</a>].
+          </li>
+          <li>
+            <b>CMG Archive (四大名著 &amp; 1952 Olympics) — Classic Restoration &amp; Enhancement</b> — Mar. 2024 – Sep. 2024<br>
+            Reference-guided video diffusion with text/optical-flow guidance to enhance semantic alignment and temporal coherence; restored the 1986 TV series <i>Journey to the West</i> and the 1952 PRC Olympic Delegation short film [<a href="https://tv.cctv.com/2024/06/28/VIDEEt71O3OL0oJAVwvElpXV240628.shtml?spm=C55953877151.PXXwefeHcOAR.0.0" target="_blank">Official Broadcast</a>].
+          </li>
+          <li>
+            <b>“Lei Feng” 4K Color Version Restoration</b> — Sep. 2023 – Mar. 2024<br>
+            Built a bidirectional temporal fusion colorization pipeline; screenings presented by partner institutes [<a href="https://cs.njust.edu.cn/ba/42/c1817a309826/page.htm" target="_blank">University News</a>].
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
 </html>
